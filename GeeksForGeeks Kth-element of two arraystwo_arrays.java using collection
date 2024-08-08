@@ -1,0 +1,44 @@
+package kth_element;
+import java.util.*;
+public class two_arrays {
+	int n = arr1.length;
+		int m = arr2.length;
+		//int[] arr3 = new int[m+n];
+		List<Integer> s1 = new ArrayList<Integer>();
+		//System.out.println("adding the first array :");
+		for(int i=0;i<n;i++)
+		{
+			s1.add(arr1[i]);
+		}
+		//System.out.println("adding the second array :");
+		for(int j=0;j<m;j++)
+		{
+			s1.add(arr2[j]);
+		}
+		/* Iterator t1 = new Iterator(); */
+		Integer[] arr3 = s1.toArray(new Integer[0]);
+		for(Integer i1 : arr3)
+		{
+			//System.out.println(i1);
+		}
+		int[] arr4 = new int[arr3.length];
+		for(int s=0;s<arr3.length;s++)
+		{
+			arr4[s] = arr3[s];
+		}
+		for(int q=0;q<arr4.length;q++)
+		{
+			//System.out.println(arr4[q]);
+		}
+		Arrays.sort(arr4);
+        return arr4[k-1];
+    }
+	public static void main(String args[])
+	{
+		int k = 2;
+		int[] arr1 = {5,5,8,8,8,9,11,11,11,11,11};
+		int[] arr2 = {4,4,4,4,6,8,9,9,9,11,13};
+		two_arrays t1 = new two_arrays();
+		System.out.println(t1.kthElement(k, arr1, arr2));
+	}
+}
